@@ -1,0 +1,46 @@
+{
+  "name": "vue-yoast",
+  "version": "0.1.0",
+  "description": "Content and SEO assessor components for Vue.js (based on YoastJS)",
+  "main": "dist/vue-yoast.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meyt/vue-yoast.git"
+  },
+  "keywords": [
+    "vue",
+    "yoast",
+    "seo",
+    "yoastseo"
+  ],
+  "author": "Mahdi Ghane.g",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meyt/vue-yoast/issues"
+  },
+  "homepage": "https://github.com/meyt/vue-yoast#readme",
+  "dependencies": {
+    "yoastseo": "^1.29.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-helper-vue-jsx-merge-props": "^2.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.5.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "debounce": "^1.1.0",
+    "file-loader": "^1.1.4",
+    "vue": "^2.4.2",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  }
+}
