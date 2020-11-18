@@ -1,6 +1,6 @@
 {
   "name": "vue-yoast",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Content and SEO assessor components for Vue.js (based on YoastJS)",
   "main": "dist/vue-yoast.js",
   "scripts": {
