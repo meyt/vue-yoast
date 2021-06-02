@@ -10,11 +10,12 @@
 </template>
 
 <script>
-import { SeoAssessor, Paper } from 'yoastseo'
-import removeHtmlBlocks from 'yoastseo/src/stringProcessing/htmlParser.js'
-import scoreToRating from 'yoastseo/src/interpreters/scoreToRating.js'
-import { getAssessorRatings, getI18n } from './utils.js'
 import debounce from 'debounce'
+import { SeoAssessor, Paper, interpreters, string } from 'yoastseo'
+import { getAssessorRatings, getI18n } from './utils.js'
+
+const removeHtmlBlocks = string.removeHtmlBlocks
+const scoreToRating = interpreters.scoreToRating
 const ratings = getAssessorRatings()
 
 export default {
