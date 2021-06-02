@@ -1,13 +1,16 @@
-import commonjs from 'rollup-plugin-commonjs'
-import vue from 'rollup-plugin-vue'
-import { eslint } from 'rollup-plugin-eslint'
-import bundleSize from 'rollup-plugin-filesize'
-import resolve from 'rollup-plugin-node-resolve'
-import pkg from './package.json'
-import css from 'rollup-plugin-css-only'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
 import json from '@rollup/plugin-json'
+import bundleSize from 'rollup-plugin-filesize'
+import { eslint } from 'rollup-plugin-eslint'
+import vue from 'rollup-plugin-vue'
+import css from 'rollup-plugin-css-only'
+import pkg from './package.json'
 
 const external = Object.keys(pkg.peerDependencies)
+external.push('util')
+external.push('url')
+external.push('htmlparser2')
 const extensions = ['.js', '.vue']
 const isProduction = !process.env.ROLLUP_WATCH
 const globals = { vue: 'Vue' }
@@ -20,7 +23,7 @@ const lintOpts = {
 }
 
 const plugins = [
-  resolve({ preferBuiltins: true }),
+  nodeResolve({ preferBuiltins: true }),
   bundleSize(),
   commonjs(),
   css(),
