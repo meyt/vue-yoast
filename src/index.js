@@ -1,9 +1,8 @@
-import ContentAssessor from './content-assessor.js'
-import SeoAssessor from './seo-assessor.js'
-import SnippetPreview from './snippet-preview.js'
+import ContentAssessor from './content-assessor.vue'
+import SeoAssessor from './seo-assessor.vue'
+import SnippetPreview from './snippet-preview.vue'
+import './style.css'
 
-export default {
-  ContentAssessor,
-  SeoAssessor,
-  SnippetPreview
-}
+export { ContentAssessor }
+export { SeoAssessor }
+export { SnippetPreview }
